@@ -29,8 +29,8 @@
   },
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEMzM0Y3MkUwNTlEQTJEOTAKUldTUUxkcFo0SEkvdzR1MDJpeGZSbmR3OUUrd3hSb3ptKzM3OE9lVnlFa2xLSURITDNXSXlCNHgK",
-      "endpoints": ["https://github.com/Trillx/spark-rs/releases/latest/download/latest.json"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDkyRTY1RDA1QTkwN0I2ODUKUldTRnRnZXBCVjNta3FDejFhU2ZQS2tscnVCUndFTVpXWEd0aUtQcjRJcmdDQ2djbGhma2VuRzgK",
+      "endpoints": ["https://github.com/RiverCityInd/spark-rs/releases/latest/download/latest.json"],
       "requireSignedVersion": true,
       "windows": { "installMode": "passive" }
     }

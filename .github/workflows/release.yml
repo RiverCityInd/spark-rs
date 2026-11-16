@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   version:
-    if: github.repository == 'Trillx/spark-rs'
+    if: github.repository == 'RiverCityInd/spark-rs'
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
