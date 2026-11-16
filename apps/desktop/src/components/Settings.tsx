@@ -29,6 +29,7 @@ import {
   Mail,
   Monitor,
   Moon,
+  SquareTerminal,
   Palette,
   Pencil,
   Plus,
@@ -2136,6 +2137,7 @@ const THEMES: { key: ThemePref; label: string; Icon: LucideIcon }[] = [
   { key: "system", label: "System", Icon: Monitor },
   { key: "light", label: "Light", Icon: Sun },
   { key: "dark", label: "Dark", Icon: Moon },
+  { key: "terminal", label: "Terminal", Icon: SquareTerminal },
 ];
 
 function AppearancePage({
@@ -2165,7 +2167,7 @@ function AppearancePage({
     <>
       <section className="mb-7">
         <h3 className="mb-2 px-1 text-[13px] font-semibold text-text-2">Theme</h3>
-        <div role="radiogroup" aria-label="Theme" className="grid grid-cols-3 gap-3">
+        <div role="radiogroup" aria-label="Theme" className="grid grid-cols-4 gap-3">
           {THEMES.map(({ key, label, Icon }) => (
             <button
               key={key}
@@ -2280,6 +2282,16 @@ function ThemePreview({ kind }: { kind: ThemePref }) {
       </div>
     </div>
   );
+  if (kind === "terminal") {
+    return (
+      <div className="h-[72px] overflow-hidden rounded-lg border border-hairline bg-[#0c0c0c] p-1.5 font-mono text-[8px] leading-[10px] text-[#16c60c]">
+        <div>$ spark inbox</div>
+        <div className="text-[#cccccc]">&gt; 3 new</div>
+        <div className="text-[#61d6d6]">&gt; 1 pinned</div>
+        <div>$ <span className="inline-block h-[8px] w-[5px] animate-pulse bg-[#16c60c] align-middle" /></div>
+      </div>
+    );
+  }
   return (
     <div className="h-[72px] overflow-hidden rounded-lg border border-hairline">
       {kind === "system" ? (
