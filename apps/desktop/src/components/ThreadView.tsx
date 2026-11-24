@@ -420,7 +420,8 @@ export default function ThreadView({
       {finding && <FindBar root={scrollRef} focus={findFocus} onClose={() => setFinding(false)} />}
       <OverlayScroll
         className="min-h-0 flex-1"
-        viewportClassName="px-3 pb-8"
+        // Room at the end to scroll the last reply bar clear of the floating "Ask me anything" pill.
+        viewportClassName="px-3 pb-20"
         viewportRef={scrollRef}
         onScroll={(e) => {
           const el = e.currentTarget;
